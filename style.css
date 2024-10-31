@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.heading{
+    font-size: 4.5rem;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    font-family: 'Poppins';
+    text-align: center;
+    font-weight: 600;
+    transform: translateX(-50%) translateY(-50%);
+    line-height: 70px;
+    animation: animHeading 2s linear infinite;
+}
+
+.heading span{
+    font-size: 2rem;
+    color: rgb(0, 156, 203);
+}
+
+@keyframes animHeading {
+    0%{
+        filter: drop-shadow(0px 0px 50px rgba(13, 166, 255, 0.826)) hue-rotate(0deg);
+        
+    }
+    50%{
+        filter: drop-shadow(0px 0px 100px rgba(13, 166, 255, 0.826)) hue-rotate(120deg);
+    }
+    100%{
+        filter: drop-shadow(0px 0px 50px rgba(13, 166, 255, 0.826)) hue-rotate(0deg);
+    }
+}
+
+
+
+/* -----------------Bottom Github Source Code Link Styling ------------------------ */
+
+
+.sourceCodeLink{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 54px;
+    overflow: hidden;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 6px 8px;
+    border-radius: 55px;
+    transition: .2s;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sourceCodeLink img{
+    width: 55px;
+    border-radius: 50%;
+}
+
+.sourceCodeLink p{
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    margin: 0;
+    margin-left: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sourceCodeLink:hover{
+    width: 222px;
+}
+
+.diya {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    background-color: #8B4513; /* Brown color for diya */
+    border-radius: 50px 50px 0 0;
+    overflow: hidden;
+}
+
+.base {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #654321; /* Darker brown for the base */
+    border-radius: 50%;
+}
+
+.flame {
+    position: absolute;
+    bottom: 60px; /* Position above the diya */
+    left: 50%;
+    width: 10px;
+    height: 20px;
+    background-color: #ffcc00; /* Yellow color for the flame */
+    border-radius: 5px;
+    transform: translateX(-50%);
+    animation: flicker 0.2s infinite alternate; /* Flicker effect */
+}
+
+@keyframes flicker {
+    0% {
+        height: 20px;
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        height: 25px;
+        opacity: 0.8;
+        transform: translateX(-50%) scale(1.1);
+    }
+    100% {
+        height: 20px;
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
